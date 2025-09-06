@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+</head>
+
+<body>
+    <div>
+        <img src="images/CatFace.png" alt="">
+    </div>
+    <div>
+        <img src="images/CatFace.png" alt="">
+    </div>
+    <div>
+        <section>
+        </section>
+        <h2>Responsive Images Using srcset</h2>
+
+        <img src="https://media.tenor.com/dDu9uYP_2i0AAAAM/water-cat-cat.gif" alt="CatBath"
+        srcset="https://media.tenor.com/dDu9uYP_2i0AAAAM/water-cat-cat.gif-160 160w,
+                https://media.tenor.com/dDu9uYP_2i0AAAAM/water-cat-cat.gif-320 320w,
+                https://media.tenor.com/dDu9uYP_2i0AAAAM/water-cat-cat.gif-640 640w,
+                https://media.tenor.com/dDu9uYP_2i0AAAAM/water-cat-cat.gif-1280 1280w">
+
+        <img src="images/TinyCatBath-fallback.png" alt=""
+        srcset="images/TinyCatBath-640.png 640w,
+        images/TinyCatBath-1280.png 1280w,
+        images/TinyCatBath-1920.png 1920w">
+
+    </div>
+</body>
+
+</html>
