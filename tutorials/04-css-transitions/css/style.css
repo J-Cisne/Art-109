@@ -1,0 +1,46 @@
+
+
+
+.title {
+    font-family: "Brush Script MT", cursive;
+}
+
+.sqaure {
+    background-color: orange;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 50px auto;
+    transition: all 1s;
+}
+
+.sqaure:hover{
+    background-color: greenyellow;
+    transform: rotate(30deg);
+}
+
+.button-div {
+    font-family: "Brush Script MT", cursive;
+    text-align: center;
+}
+
+.button {
+    color: white;
+    background-color: red;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    display:inline-block ;
+    transition: all .5s;
+    /* margin: 50px auto;
+    display: block;
+    width: 100px;
+    text-align: center; */
+
+}
+
+.button:hover{
+    background-color: blueviolet;
+    color: black;
+    transform: scale(1.5);
+}
