@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pick A Flavor!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('https://i.pinimg.com/originals/f3/dd/af/f3ddaf1f75f89239720eaef33c0150e7.gif');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: sans-serif;
+      text-align: center;
+      color: rgb(141, 76, 130);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header, main, footer {
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 6em;
+      margin-bottom: 30px;
+    }
+
+    .icecream-container {
+      display: flex;
+      align-items: center;
+      gap: 350px;
+      margin-bottom: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .ice-cream {
+      width: 400px;
+      height: auto;
+    }
+
+    .side-image {
+      width: 20vw;
+      max-width: 650px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .color-picker-container {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .picker-label {
+      font-size: 60px;
+      margin-bottom: 5px;
+      color: rgb(108, 65, 98);
+    }
+
+    input[type="color"] {
+      padding: 15px;
+      font-size: 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      padding: 20px;
+      font-size: 1rem;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pick Your Ice Cream Flavor!</h1>
+  </header>
+
+  <main>
+    <section class="icecream-container">
+      <!-- Left Responsive Image -->
+      <picture>
+        <source srcset="images/scoops1-large.png" media="(min-width: 1024px)">
+        <source srcset="images/scoops1-medium.png" media="(min-width: 768px)">
+        <img src="images/scoops1-small.png" alt="Scoops of ice cream" class="side-image" />
+      </picture>
+
+      <!-- Two-Scoop Ice Cream with Sprinkles -->
+      <svg
+        class="ice-cream"
+        viewBox="0 0 100 120"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <!-- Cone -->
+        <polygon points="50,115 30,70 70,70" fill="#D2691E" />
+
+        <!-- Bottom Scoop -->
+        <circle id="scoop2" cx="50" cy="50" r="25" fill="#add8e6" />
+        <!-- Sprinkles on Bottom Scoop -->
+        <circle cx="40" cy="38" r="2.5" fill="#FF0000" />
+        <circle cx="55" cy="35" r="2.5" fill="#00FF00" />
+        <circle cx="45" cy="48" r="2.5" fill="#0000FF" />
+        <circle cx="62" cy="52" r="2.5" fill="#FFFF00" />
+        <circle cx="35" cy="55" r="2.5" fill="#FF00FF" />
+        <circle cx="58" cy="60" r="2.5" fill="#00FFFF" />
+        <circle cx="43" cy="63" r="2.5" fill="#FFA500" />
+
+        <!-- Top Scoop -->
+        <circle id="scoop1" cx="50" cy="20" r="25" fill="#FFC0CB" />
+        <!-- Sprinkles on Top Scoop -->
+        <circle cx="40" cy="8" r="2.5" fill="#FF0000" />
+        <circle cx="55" cy="5" r="2.5" fill="#00FF00" />
+        <circle cx="45" cy="18" r="2.5" fill="#0000FF" />
+        <circle cx="62" cy="22" r="2.5" fill="#FFFF00" />
+        <circle cx="35" cy="25" r="2.5" fill="#FF00FF" />
+        <circle cx="58" cy="30" r="2.5" fill="#00FFFF" />
+        <circle cx="43" cy="33" r="2.5" fill="#FFA500" />
+      </svg>
+
+      <!-- Right Responsive Image -->
+      <picture>
+        <source srcset="images/scoops1-large.png" media="(min-width: 1024px)">
+        <source srcset="images/scoops1-medium.png" media="(min-width: 768px)">
+        <img src="images/scoops1-small.png" alt="Scoops of ice cream" class="side-image" />
+      </picture>
+    </section>
+
+    <section class="color-picker-container">
+      <div>
+        <label class="picker-label" for="colorPicker1">Top Scoop Color</label><br />
+        <input type="color" id="colorPicker1" value="#FFC0CB" />
+      </div>
+      <div>
+        <label class="picker-label" for="colorPicker2">Bottom Scoop Color</label><br />
+        <input type="color" id="colorPicker2" value="#ADD8E6" />
+      </div>
+    </section>
+  </main>
+  <script>
+    const colorPicker1 = document.getElementById("colorPicker1");
+    const colorPicker2 = document.getElementById("colorPicker2");
+    const topScoop = document.getElementById("scoop1");
+    const bottomScoop = document.getElementById("scoop2");
+
+    colorPicker1.addEventListener("input", () => {
+      topScoop.setAttribute("fill", colorPicker1.value);
+    });
+
+    colorPicker2.addEventListener("input", () => {
+      bottomScoop.setAttribute("fill", colorPicker2.value);
+    });
+  </script>
+</body>
+</html>
