@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bay Area Cities Map</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Map of California Bay Cities</h1>
+    <p>Click a city name on the map or in the list to open its page.</p>
+  </header>
+
+  <main class="container">
+    <section class="map-wrap">
+      <!-- Simple illustrative SVG map with clickable city names -->
+      <svg viewBox="0 0 800 600" class="bay-map" aria-labelledby="mapTitle mapDesc">
+        <title id="mapTitle">Simplified Bay Area map</title>
+        <desc id="mapDesc">Approximate positions of major Bay Area cities shown as clickable points.</desc>
+
+        <!-- California silhouette as clipped image background + outline -->
+
+
+        <!-- image clipped to the California silhouette -->
+        <image href="assets/images/cali.jpg" x="0" y="0" width="800" height="600" preserveAspectRatio="xMidYMid slice" clip-path="url(#calClip)" />
+
+        <!-- City points and links -->
+        <g class="cities">
+          <a href="cities/san-francisco.html">
+            <circle cx="170" cy="270" r="14" class="city-point" />
+            <text x="190" y="275" class="city-label">San Francisco</text>
+          </a>
+
+          <a href="cities/burlingame.html">
+            <circle cx="220" cy="310" r="12" class="city-point" />
+            <text x="240" y="315" class="city-label">Burlingame</text>
+          </a>
+
+          <a href="cities/california-ave.html">
+            <circle cx="220" cy="290" r="10" class="city-point" />
+            <text x="240" y="295" class="city-label">California Ave</text>
+          </a>
+
+          <a href="cities/cupertino.html">
+            <circle cx="270" cy="350" r="10" class="city-point" />
+            <text x="290" y="355" class="city-label">Cupertino</text>
+          </a>
+
+          <a href="cities/san-jose.html">
+            <circle cx="310" cy="410" r="12" class="city-point" />
+            <text x="330" y="415" class="city-label">San Jose</text>
+          </a>
+
+          <a href="cities/san-mateo.html">
+            <circle cx="200" cy="290" r="9" class="city-point" />
+            <text x="220" y="305" class="city-label">San Mateo</text>
+          </a>
+        </g>
+      </svg>
+    </section>
+
+    <aside class="city-list">
+      <h2>Cities</h2>
+      <ul>
+        <li><a href="cities/san-francisco.html">San Francisco</a></li>
+        <li><a href="cities/burlingame.html">Burlingame</a></li>
+        <li><a href="cities/california-ave.html">California Ave</a></li>
+        <li><a href="cities/cupertino.html">Cupertino</a></li>
+        <li><a href="cities/san-jose.html">San Jose</a></li>
+        <li><a href="cities/san-mateo.html">San Mateo</a></li>
+      </ul>
+    </aside>
+  </main>
+
+
+</body>
+</html>

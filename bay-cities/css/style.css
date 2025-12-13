@@ -1,0 +1,59 @@
+/* Simple styles for the Bay Cities map demo */
+:root{
+  --bg:#fafcff;
+  --accent:#1f78ff;
+  --muted:#6b7280;
+}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.4;margin:0;background:var(--bg);color:#0f172a}
+
+/* Full-site background image (Cali) */
+body{
+  background-image: url('../assets/images/cali.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Make header and panels slightly translucent for readability over the photo */
+header, .city-list, footer, .map-wrap{
+  background-color: rgba(255,255,255,0.85);
+}
+
+/* Disable the full-site photo background on city pages */
+body.no-bg{
+  background-image: none !important;
+  background-color: var(--bg) !important;
+  background-attachment: scroll !important;
+}
+header{padding:1rem 1.5rem;background:#fff;border-bottom:1px solid #e6eefc}
+header h1{margin:0;font-size:1.25rem}
+.container{display:flex;flex-wrap:wrap;gap:1rem;padding:1.25rem}
+.map-wrap{flex:1 1 520px;min-width:280px}
+.bay-map{width:100%;height:auto;border-radius:8px;box-shadow:0 6px 18px rgba(12,20,40,0.08);background:#f8fbff}
+.california-shape{stroke:#7aa7ff;stroke-width:1.6}
+.bay-map{background:linear-gradient(180deg,#fbfdff 0%, #f0f6ff 100%)}
+.city-point{fill:var(--accent);stroke:#fff;stroke-width:2;cursor:pointer}
+.city-label{font-size:14px;fill:#08304d;pointer-events:none}
+.city-list{width:220px;background:#fff;padding:1rem;border-radius:8px;box-shadow:0 4px 12px rgba(12,20,40,0.04)}
+.city-list h2{margin-top:0}
+.city-list ul{padding-left:1rem}
+.city-list a{color:var(--accent);text-decoration:none}
+.city-list a:hover{text-decoration:underline}
+footer{padding:1rem 1.5rem;color:var(--muted);font-size:0.9rem}
+
+/* City page image styling */
+.city-photo{
+  width:100%;
+  max-width:720px;
+  height:auto;
+  display:block;
+  margin:0.6rem 0;
+  border-radius:8px;
+  box-shadow:0 6px 18px rgba(12,20,40,0.08);
+}
+
+@media (max-width:800px){
+  .container{flex-direction:column}
+  .city-list{width:100%}
+}
