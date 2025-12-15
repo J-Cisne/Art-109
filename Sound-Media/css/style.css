@@ -1,0 +1,19 @@
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#play-button,
+#pause-button,
+#volume-slider,
+#volume-label {
+    visibility: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
